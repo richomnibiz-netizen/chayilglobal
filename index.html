@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chayil Group | Real Estate, Investments, Acquisitions</title>
+<meta name="description" content="Chayil Group buys, renovates, and resells residential property, partnering with homeowners, agents, and investors. Building Wealth with Purpose.">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:title" content="Chayil Group"><meta property="og:description" content="Real Estate | Investments | Acquisitions. Building Wealth with Purpose."><meta property="og:image" content="https://www.chayilglobal.com/logo.png">
+<link rel="preload" href="playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="hero-wide.jpg" as="image">
+<style>
+/* VOICE: established, premium real estate investment partner (Hegemark / L&A family)
+   IDEA: luxury listing brochure: full-bleed home at golden hour, editorial serif
+   PICTURE: full-screen photo hero of a newer modern home with slow zoom
+   COLOUR and TYPE: charcoal #1f2125, warm off-white #f5f3ef, gold #b8975a; Playfair Display + Inter (self-hosted)
+   LAYOUT: header, hero, trust bar, who we serve, stats, projects, how it works, CTA, footer */
+@font-face{font-family:"Playfair Display";font-weight:600;font-display:swap;src:url(playfair-display-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Playfair Display";font-weight:700;font-display:swap;src:url(playfair-display-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(inter-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:500;font-display:swap;src:url(inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(inter-latin-600-normal.woff2) format("woff2")}
+:root{color-scheme:light;--bg:#f5f3ef;--bg2:#ece9e3;--white:#fff;--ink:#16231f;--muted:#5f626a;--line:#e2ded6;--char:#1a2b26;--char2:#24382f;--gold:#c9ae74;--gold2:#a88d55;--goldlt:#dcc690;--serif:"Playfair Display",Georgia,serif;--sans:Inter,-apple-system,system-ui,sans-serif}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--sans);overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(64px,9vw,120px) max(5vw,20px)}
+h2{font-size:clamp(34px,4.6vw,52px)}
+.lead{font-size:18px;color:var(--muted);margin-top:14px;max-width:40em}
+.ph{background:rgba(201,174,116,.18);color:#6d5626;border-radius:4px;padding:0 6px;white-space:nowrap}
+.on-dark .ph{background:rgba(201,174,116,.22);color:var(--goldlt)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 32px;border-radius:4px;font:600 14px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:transform .25s,background .25s,color .25s,border-color .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.b-white{background:#fff;color:var(--char)}.b-white:hover{box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.b-outline{border-color:rgba(255,255,255,.85);color:#fff;background:transparent}.b-outline:hover{background:#fff;color:var(--char)}
+.b-gold{background:var(--gold);color:#fff}.b-gold:hover{background:var(--gold2);box-shadow:0 12px 30px rgba(201,174,116,.35)}
+.b-dark{background:var(--char);color:#fff;width:100%;text-transform:none;letter-spacing:0;font-size:15px;min-height:48px}.b-dark:hover{background:var(--gold2)}
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.bar{display:flex;align-items:center;gap:24px;height:76px;padding:0 max(5vw,20px);max-width:1340px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
+.mark{display:grid;place-items:center;background:var(--char);border-radius:9px;padding:7px 14px 6px;line-height:1}
+.mark b{font:600 19px/1 var(--sans);letter-spacing:.04em;color:var(--goldlt)}
+.mark i{font:500 8.5px/1 var(--sans);font-style:normal;letter-spacing:.42em;color:#fff;margin:4px -.42em 0 0}
+.tagline{font:italic 500 15px var(--sans);color:var(--gold2);white-space:nowrap}
+@media(max-width:1280px){.tagline{display:none}}
+nav{display:flex;gap:2px;margin:0 auto}
+nav a{position:relative;text-decoration:none;font:500 15px var(--sans);padding:10px 14px;border-radius:6px;color:#2b4239;white-space:nowrap}
+nav a:hover{background:var(--bg2)}
+nav a.active{background:var(--bg2);color:var(--ink)}
+nav a.active::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;background:var(--ink);border-radius:2px}
+.right{display:flex;align-items:center;gap:18px;white-space:nowrap}
+.right .tel{color:var(--muted);font-size:15px}
+.get{background:var(--char);color:#fff;border-radius:6px;padding:11px 18px;font:600 14px var(--sans);text-decoration:none;border:0;cursor:pointer}
+.get:hover{background:var(--gold2)}
+.menu{display:none;margin-left:auto;width:46px;height:46px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer;align-items:center;justify-content:center;color:var(--ink)}
+@media(max-width:1180px){.right .tel{display:none}}
+@media(max-width:980px){.menu{display:inline-flex}nav{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:#fff;padding:10px max(5vw,20px) 18px;border-bottom:1px solid var(--line)}nav.open{display:flex}nav a{padding:14px}nav a.active::after{display:none}.right{display:none}}
+/* hero */
+.hero{position:relative;isolation:isolate;min-height:min(88vh,860px);display:flex;flex-direction:column;justify-content:center;color:#fff;overflow:hidden;background:var(--char)}
+.hero .bg{position:absolute;inset:0;z-index:-2;background:url(hero-wide.jpg) 62% 50%/cover no-repeat;transform:scale(1.08);animation:drift 22s ease-out forwards}
+@keyframes drift{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(16,16,18,.94) 0%,rgba(16,16,18,.82) 38%,rgba(16,16,18,.35) 70%,rgba(16,16,18,.15) 100%),linear-gradient(0deg,rgba(16,16,18,.75) 0%,rgba(16,16,18,0) 35%)}
+.hero .inner{width:100%;max-width:1240px;margin:0 auto;padding:clamp(80px,12vh,140px) max(5vw,20px) 150px}
+.kicker{display:flex;align-items:center;gap:12px;font:500 15px var(--sans);color:var(--goldlt);margin-bottom:22px}
+.kicker svg{width:18px;height:18px}
+.hero h1{font-size:clamp(44px,7vw,88px);max-width:11ch;line-height:1.02}
+.hero p{font-size:clamp(17px,1.7vw,21px);color:rgba(255,255,255,.86);margin:26px 0 40px;max-width:33em;line-height:1.55}
+.hero .cta{display:flex;gap:16px;flex-wrap:wrap}
+.trustbar{position:absolute;left:0;right:0;bottom:0;border-top:1px solid rgba(255,255,255,.14);background:rgba(16,16,18,.55);backdrop-filter:blur(12px)}
+.trustbar .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:0 max(5vw,20px)}
+.trustbar div{display:flex;align-items:center;gap:14px;padding:24px 0;font:500 15px var(--sans);color:rgba(255,255,255,.92)}
+.trustbar div+div{padding-left:28px;border-left:1px solid rgba(255,255,255,.14)}
+.trustbar svg{width:24px;height:24px;color:var(--gold);flex:none}
+@media(max-width:820px){.hero .inner{padding-bottom:60px}.trustbar{position:static}.trustbar .wrap{grid-template-columns:minmax(0,1fr)}.trustbar div{padding:16px 0}.trustbar div+div{padding-left:0;border-left:0;border-top:1px solid rgba(255,255,255,.12)}}
+/* intro */
+.intro{background:#fff;border-bottom:1px solid var(--line);padding:30px max(5vw,20px);text-align:center;color:var(--muted);font-size:17px}
+/* serve */
+.serve{background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:52px}
+@media(max-width:900px){.cards{grid-template-columns:minmax(0,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:34px 30px 30px;display:flex;flex-direction:column;gap:14px;box-shadow:0 2px 10px rgba(0,0,0,.03);transition:transform .35s,box-shadow .35s,border-color .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,.1);border-color:#d8cdb7}
+.card .ic{width:54px;height:54px;border-radius:10px;background:var(--char);color:var(--gold);display:grid;place-items:center;margin-bottom:6px}
+.card .ic svg{width:26px;height:26px}
+.card h3{font-size:27px}
+.card p{color:var(--muted);font-size:16.5px;margin-bottom:12px}
+.card .btn{margin-top:auto}
+.consent{font-size:13px;color:var(--muted);text-align:center;max-width:780px;margin:34px auto 0;line-height:1.6}
+/* stats */
+.stats{background:var(--char);color:#fff}
+.sgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.stat{border-top:1px solid rgba(255,255,255,.16);padding-top:28px}
+.stat b{display:block;font:700 clamp(48px,6vw,76px)/1 var(--serif);color:#fff}
+.stat span{display:block;margin-top:16px;font:600 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+@media(max-width:760px){.sgrid{grid-template-columns:minmax(0,1fr)}}
+.fine{font-size:13px;color:var(--muted);margin-top:28px}.stats .fine{color:rgba(255,255,255,.55)}
+/* projects */
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:52px}
+@media(max-width:900px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.pgrid{grid-template-columns:minmax(0,1fr)}}
+.proj{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .35s,box-shadow .35s}
+.proj:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,.1)}
+.proj .pic{position:relative;aspect-ratio:4/3;background:radial-gradient(120% 90% at 30% 20%,#2a2a2e 0%,#141416 70%);display:grid;place-items:center;color:rgba(201,174,116,.7)}
+.proj .pic svg{width:64px;height:64px}
+.proj .tag{position:absolute;left:16px;top:16px;background:var(--gold);color:#fff;font:600 12px var(--sans);padding:6px 12px;border-radius:999px}
+.proj .body{padding:22px 24px 26px}
+.proj .price{font:700 26px var(--sans);letter-spacing:-.01em}
+.proj h3{font:600 18px var(--sans);margin:8px 0 2px}
+.proj .loc{color:var(--muted);font-size:15px}
+.proj .meta{display:flex;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:16px;padding-top:14px;color:var(--muted);font-size:14px}
+/* process */
+.process{background:#fff}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:64px;position:relative}
+.steps::before{content:"";position:absolute;top:36px;left:12.5%;right:12.5%;height:1px;background:var(--line)}
+.step{text-align:center;position:relative}
+.step .ic{width:72px;height:72px;border-radius:16px;background:var(--char);color:#fff;display:grid;place-items:center;margin:0 auto 22px;box-shadow:0 12px 26px rgba(26,43,38,.22);transition:background .3s,transform .3s}
+.step:hover .ic{background:var(--gold);transform:translateY(-4px)}
+.step .ic svg{width:30px;height:30px}
+.step h3{font-size:24px}
+.step p{color:var(--muted);font-size:15.5px;margin:10px auto 0;max-width:24ch}
+@media(max-width:860px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}.steps::before{display:none}}
+@media(max-width:480px){.steps{grid-template-columns:minmax(0,1fr)}}
+/* cta */
+.final{position:relative;isolation:isolate;background:var(--char);color:#fff;text-align:center;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;background:url(hero-wide.jpg) center/cover;opacity:.14}
+.final h2{font-size:clamp(36px,5vw,58px)}
+.final p{font-size:19px;color:rgba(255,255,255,.82);max-width:36em;margin:20px auto 40px}
+.final .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+/* footer */
+footer{background:#faf9f7;border-top:1px solid var(--line);padding:72px max(5vw,20px) 32px}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1.3fr 1fr;gap:40px}
+@media(max-width:900px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.fgrid{grid-template-columns:minmax(0,1fr)}}
+footer h4{font-size:22px;margin-bottom:18px}
+footer p,footer li{color:var(--muted);font-size:15.5px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+footer a{text-decoration:none;color:var(--muted)}footer a:hover{color:var(--ink)}
+footer li{display:flex;gap:10px;align-items:flex-start}footer li svg{width:18px;height:18px;flex:none;margin-top:3px}
+.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;border-top:1px solid var(--line);margin-top:52px;padding-top:26px;font-size:14.5px;color:var(--muted)}
+.legal div{display:flex;gap:26px;flex-wrap:wrap}
+/* modal form */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(16,16,18,.7);backdrop-filter:blur(4px)}
+.modal.open{display:flex;animation:fade .25s}
+@keyframes fade{from{opacity:0}}
+.sheet{background:#fff;border-radius:14px;width:min(640px,100%);max-height:calc(100vh - 40px);overflow:auto;padding:clamp(22px,4vw,40px);position:relative;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.sheet h3{font-size:30px;padding-right:44px}
+.sheet .x{position:absolute;right:16px;top:16px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:22px;line-height:1;color:var(--ink)}
+.tabs{display:flex;gap:6px;background:var(--bg2);padding:5px;border-radius:8px;margin:20px 0 22px}
+.tab{flex:1;min-height:44px;border:0;border-radius:6px;background:transparent;font:600 14px var(--sans);color:var(--muted);cursor:pointer}
+.tab[aria-selected=true]{background:#fff;color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.08)}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+form .full{grid-column:1/-1}
+@media(max-width:540px){form{grid-template-columns:minmax(0,1fr)}.tab{font-size:13px}}
+label{display:grid;gap:6px;font:600 13.5px var(--sans)}
+input,select,textarea{font:16px var(--sans);padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:#fbfaf8;color:var(--ink);width:100%;min-height:48px}
+textarea{min-height:100px;resize:vertical}
+.msg{display:none;padding:14px;border-radius:8px;background:rgba(201,174,116,.15);color:#6b5226;font-size:14.5px}.msg.show{display:block}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+.js .hero .rv{transition-duration:1s}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero .bg{animation:none;transform:none}.js .rv{opacity:1;transform:none;transition:none}.btn,.card,.proj{transition:none}}
+
+/* black + gold to match logo */
+:root{--ink:#17171a;--char:#141416;--char2:#222226;--gold:#c99f3e;--gold2:#a8822c;--goldlt:#e6c56f}
+header{background:rgba(20,20,22,.97);border-bottom:1px solid rgba(201,159,62,.25)}
+header.scrolled{box-shadow:0 8px 28px rgba(0,0,0,.45)}
+.bar{height:84px}
+.logo img{height:64px;width:auto;display:block}
+nav a{color:rgba(255,255,255,.82)}
+nav a:hover{background:rgba(255,255,255,.07);color:#fff}
+nav a.active{background:rgba(255,255,255,.09);color:#fff}
+nav a.active::after{background:var(--gold)}
+.right .tel a{color:rgba(255,255,255,.75);text-decoration:none}
+.get{background:var(--gold);color:#141416}.get:hover{background:var(--goldlt)}
+.menu{background:transparent;border-color:rgba(255,255,255,.25);color:#fff}
+@media(max-width:980px){nav{top:84px;background:#141416;border-bottom:1px solid rgba(201,159,62,.25)}}
+@media(max-width:1180px){nav a{padding:10px 10px;font-size:14.5px}}
+html{scroll-padding-top:90px}
+.b-gold{color:#141416}.b-gold:hover{background:var(--goldlt)}
+.card .ic,.feat .ic,.step .ic{background:var(--char)}
+footer{background:#141416;border-top:1px solid rgba(201,159,62,.25)}
+footer h4{color:#fff}footer p,footer li,footer a{color:rgba(255,255,255,.65)}footer a:hover{color:var(--goldlt)}
+footer p[style*="var(--ink)"]{color:#fff!important}
+.flogo{height:96px;width:auto;display:block;margin-bottom:18px}
+.legal{border-top-color:rgba(255,255,255,.12);color:rgba(255,255,255,.5)}
+
+/* multi-page */
+.phero{position:relative;isolation:isolate;overflow:hidden;background:var(--char);color:#fff;padding:clamp(80px,12vw,150px) max(5vw,20px) clamp(64px,9vw,110px)}
+.phero .pbg{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(16,16,18,.94) 0%,rgba(16,16,18,.8) 45%,rgba(16,16,18,.45) 100%),url(hero-wide.jpg) 62% 50%/cover;transform:scale(1.06);animation:drift 22s ease-out forwards}
+.phero h1{font-size:clamp(40px,6vw,72px);max-width:14ch}
+.phero p{font-size:clamp(17px,1.7vw,21px);color:rgba(255,255,255,.86);margin-top:22px;max-width:34em}
+.lead.big{font-size:clamp(18px,1.8vw,21px);line-height:1.7;max-width:52em;color:#43464d}
+.feats{display:grid;gap:28px;margin-top:52px}.feats.c3{grid-template-columns:repeat(3,minmax(0,1fr))}.feats.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:980px){.feats.c4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){.feats.c3{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:520px){.feats.c4{grid-template-columns:minmax(0,1fr)}}
+.feat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:32px 28px;transition:transform .35s,box-shadow .35s}
+.feat:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,.1)}
+.feat .ic{width:54px;height:54px;border-radius:10px;background:var(--char);color:var(--gold);display:grid;place-items:center;margin-bottom:20px}
+.feat .ic svg{width:26px;height:26px}.feat h3{font-size:24px}.feat p{color:var(--muted);margin-top:10px}
+.quote{margin:64px auto 0;max-width:820px;text-align:center;background:var(--char);color:#fff;border-radius:16px;padding:clamp(32px,5vw,56px)}
+.quote .qi{color:var(--gold);width:40px;height:40px;margin:0 auto 18px}.quote .qi svg{width:40px;height:40px}
+.quote blockquote{margin:0;font:600 clamp(20px,2.4vw,26px)/1.45 var(--serif)}
+.quote figcaption{margin-top:22px;display:grid;gap:4px;color:rgba(255,255,255,.7);font-size:15px}.quote figcaption b{color:#fff}
+.quote .ph{background:rgba(201,174,116,.22);color:var(--goldlt);white-space:normal}
+.formband{background:linear-gradient(180deg,var(--bg) 0%,#fff 100%)}
+.fwrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start}
+@media(max-width:900px){.fwrap{grid-template-columns:minmax(0,1fr);gap:28px}}
+.pform{background:#fff;border:1px solid var(--line);border-radius:14px;padding:clamp(22px,4vw,40px);box-shadow:0 24px 60px rgba(0,0,0,.08)}
+.pform .consent{text-align:left;margin:0}
+.msg.show{display:block}
+.smsband{background:var(--char);color:#fff;padding-block:clamp(48px,6vw,72px)}
+.sms{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 48px;align-items:center}
+.sms h3{font-size:30px}.sms p{color:rgba(255,255,255,.78);margin-top:10px}
+.sms .consent{grid-column:1/-1;color:rgba(255,255,255,.55)}.sms .consent a{color:var(--goldlt)}
+.smsform{display:flex;gap:12px;flex-wrap:wrap;grid-template-columns:none}.smsform input{flex:1 1 220px}
+.smsform .msg{flex-basis:100%}
+@media(max-width:760px){.sms{grid-template-columns:minmax(0,1fr)}}
+.nsteps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:56px;counter-reset:s}
+@media(max-width:760px){.nsteps{grid-template-columns:minmax(0,1fr)}}
+.nstep{background:#fff;border:1px solid var(--line);border-radius:12px;padding:32px 28px}
+.nstep span{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--gold);color:#fff;font:700 22px var(--serif);margin-bottom:18px}
+.nstep h3{font-size:24px}.nstep p{color:var(--muted);margin-top:8px}
+.split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:minmax(0,1fr)}}
+.aboutpic{aspect-ratio:4/5;border-radius:16px;background:url(hero-wide.jpg) 35% 50%/cover;box-shadow:0 30px 70px rgba(0,0,0,.18)}
+.tgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+@media(max-width:860px){.tgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.tgrid{grid-template-columns:minmax(0,1fr)}}
+.member{background:#fff;border:1px solid var(--line);border-radius:14px;padding:36px 28px;text-align:center;transition:transform .35s,box-shadow .35s}
+.member:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,.1)}
+.avatar{width:120px;height:120px;border-radius:50%;margin:0 auto 20px;background:var(--char);color:var(--gold);display:grid;place-items:center;font:700 36px var(--serif)}
+.member h3{font-size:24px}.member .role{color:var(--gold2);font-weight:600;margin-top:6px}.member .bio{color:var(--muted);margin-top:12px}
+.proj .meta span{display:inline-flex;align-items:center;gap:6px}.proj .date{margin-top:10px;font-size:13.5px;color:var(--muted)}
+.namesec{background:var(--char);color:#fff}.namesec .kick{color:var(--goldlt);font-weight:600;margin-bottom:14px}.namesec .namep{font-size:19px;color:rgba(255,255,255,.85);margin:22px auto 0;max-width:40em}.namesec blockquote{margin:34px auto 0;font:600 clamp(20px,2.4vw,26px)/1.45 var(--serif);color:var(--goldlt)}.namesec cite{display:block;margin-top:14px;font:500 14px var(--sans);font-style:normal;color:rgba(255,255,255,.6)}
+.proj .pic{overflow:hidden}.proj .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}.proj:hover .pic img{transform:scale(1.05)}.proj .tag{z-index:1}
+.legaltext{max-width:820px}.legaltext h3{font-size:24px;margin:28px 0 8px}.legaltext p{color:var(--muted)}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<header id="top">
+  <div class="bar">
+    <a class="logo" href="#home" aria-label="Chayil Group home"><img src="logo.png" width="399" height="227" alt="Chayil Group – Real Estate | Investments | Acquisitions"></a>
+    <nav id="nav" aria-label="Main">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#team">Team</a><a href="#agents">For Agents</a><a href="#homeowners">For Homeowners</a><a href="#investors">For Investors</a><a href="#careers">Careers</a>
+    </nav>
+    <div class="right"><span class="tel"><a href="tel:+17145019995">714-501-9995</a></span><a class="get" href="#agents">Get Started</a></div>
+    <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+<main id="main"><div class="page" data-page="home"><section class="hero" id="home-hero">
+  <div class="bg" role="img" aria-label="Newer modern home with a pool at sunset"></div>
+  <div class="inner">
+    <div class="kicker rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Real Estate &nbsp;|&nbsp; Investments &nbsp;|&nbsp; Acquisitions</div>
+    <h1 class="rv">Your Trusted Partner in Real Estate Investment</h1>
+    <p class="rv">Decades of construction and real estate expertise, combined with modern analytics, to deliver better outcomes for homeowners, real estate professionals, and capital partners.</p>
+    <div class="cta rv">
+      <a class="btn b-white" href="#agents">Submit a Property</a>
+      <a class="btn b-outline" href="#investors">Partner With Us</a>
+    </div>
+  </div>
+  <div class="trustbar">
+    <div class="wrap">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Backed by proven performance</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>$600M+&nbsp;in completed transactions</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2 .7 3.2 2.5 3.5 5.2"/></svg>50+&nbsp;years of combined team expertise</div>
+    </div>
+  </div>
+</section>
+
+<p class="intro">Chayil Group is a team of STJ Investments LLC, backed by $600M+ in completed transactions, 1,000+ successful property deals, and 50+ years of combined team expertise.</p>
+
+<section class="band serve" >
+  <div class="wrap">
+    <h2 class="rv">Who We Serve</h2>
+    <p class="lead rv">Customized approaches for professionals, owners, and partners.</p>
+    <div class="cards">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2 .7 3.2 2.5 3.5 5.2"/></svg></div>
+        <h3>Real Estate Professionals</h3><p>Rapid evaluations, transparent agreements, and punctual closings. Bring us your off-market and as-is opportunities.</p>
+        <a class="btn b-dark" href="#agents">Submit Opportunity</a>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11 12 4l9 7v9H3z"/><path d="M10 20v-6h4v6"/></svg></div>
+        <h3>Property Owners</h3><p>Competitive, no-pressure cash offers. No repairs, no showings. Close on your preferred schedule.</p>
+        <a class="btn b-dark" href="#homeowners">Get My Offer</a>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg></div>
+        <h3>Capital Partners</h3><p>Rigorous deal sourcing. Transparent frameworks. Comprehensive reporting from acquisition to resale.</p>
+        <a class="btn b-dark" href="#investors">Inquire Now</a>
+      </div>
+    </div>
+    <p class="consent">By providing your phone number, you agree to receive text messages from Chayil Group (e.g., property updates, investment opportunities). Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help. View our Privacy Policy and Terms and Conditions.</p>
+  </div>
+</section>
+
+<section class="band stats on-dark">
+  <div class="wrap">
+    <div class="sgrid">
+      <div class="stat rv"><b>$600M+</b><span>In completed transactions</span></div>
+      <div class="stat rv"><b>50+</b><span>Years of combined team expertise</span></div>
+      <div class="stat rv"><b>1,000+</b><span>Successful property deals</span></div>
+    </div>
+    <p class="fine">Figures reflect transactions completed by STJ Investments LLC and its team.</p>
+  </div>
+</section>
+
+<section class="band" >
+  <div class="wrap">
+    <h2 class="rv">Recent Transactions</h2>
+    <p class="lead rv">A proven track record of successful deals.</p>
+    <div class="pgrid" id="deals"></div>
+    
+  </div>
+</section>
+
+<section class="band process" >
+  <div class="wrap" style="text-align:center">
+    <h2 class="rv">How It Works</h2>
+    <p class="lead rv" style="margin-inline:auto">Our process is built for transparency and excellence at every stage.</p>
+    <div class="steps">
+      <div class="step rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></div><h3>Evaluate</h3><p>We analyze each opportunity, including condition, comps, and rehab scope, against our criteria.</p></div>
+      <div class="step rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h4"/></svg></div><h3>Structure</h3><p>Transparent terms and straightforward pricing set clear expectations.</p></div>
+      <div class="step rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l5.3-5.3a1 1 0 0 0 0-1.4l-6-6L9.6 10.4a2 2 0 0 1-2.8-2.8L10 4.4"/><path d="m3 13 5 5M7 4l-4 4 6 6"/></svg></div><h3>Close</h3><p>Expert execution with careful attention to detail and on-time completion.</p></div>
+      <div class="step rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2 .7 3.2 2.5 3.5 5.2"/></svg></div><h3>Partner</h3><p>Lasting relationships grounded in reliability and proven results.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band final on-dark">
+  <div class="wrap">
+    <h2 class="rv">Let us know how we can assist you.</h2>
+    <p class="rv">Whether you're a professional with an opportunity, a property owner weighing your options, or an investor seeking collaboration, we're ready to help.</p>
+    <div class="row rv">
+      <a class="btn b-white" href="#agents">For Agents</a>
+      <a class="btn b-outline" href="#homeowners">For Homeowners</a>
+      <a class="btn b-outline" href="#investors">For Investors</a>
+    </div>
+  </div>
+</section>
+
+</div><div class="page" data-page="about" hidden><section class="phero on-dark"><div class="pbg" aria-hidden="true"></div><div class="wrap"><h1 class="rv">About Chayil Group</h1><p class="rv">A residential real estate investment company built on construction and brokerage experience.</p></div></section>
+<section class="band"><div class="wrap split">
+<div class="rv"><h2>Built from the ground up</h2>
+<p class="lead">Chayil Group buys, renovates, and resells residential property. Our team pairs years of licensed construction work with real estate brokerage experience.</p>
+<p class="lead">That means we price a rehab accurately, move quickly, and deliver finished homes buyers want. We work directly with homeowners who need a simple sale, agents with opportunities that don't fit the traditional market, and capital partners looking for well-structured residential deals.</p>
+<p class="lead"><span class="ph">[Add company history, licensing, and service area]</span></p></div>
+<div class="aboutpic rv" role="img" aria-label="Newer modern home"></div></div></section>
+<section class="band namesec on-dark"><div class="wrap" style="max-width:860px;text-align:center"><p class="kick rv">Why Chayil</p><h2 class="rv">Building Wealth with Purpose.</h2><p class="rv namep"><i>Chayil</i> is the Hebrew word for strength, ability, and wealth. Our name is connected to Deuteronomy 8:18, which reminds us that God gives us the ability to produce wealth.</p><blockquote class="rv">&ldquo;But thou shalt remember the LORD thy God: for it is he that giveth thee power to get wealth.&rdquo;<cite>Deuteronomy 8:18 (KJV)</cite></blockquote></div></section>
+<section class="band" style="background:#fff"><div class="wrap"><h2 class="rv">What We Stand For</h2><p class="lead rv">The standards behind every deal.</p>
+<div class="feats c3"><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div><h3>Disciplined Evaluation</h3><p>Every property is underwritten on condition, comps, and true rehab cost before we commit.</p></div><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h4"/></svg></div><h3>Transparency</h3><p>Clear terms, straightforward pricing, and no surprises at the closing table.</p></div><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 12 6 21l-3-3 9-9M13 5l6 6M11 7l4-4 6 6-4 4"/></svg></div><h3>Execution</h3><p>In-house construction knowledge keeps projects on scope, on budget, and on schedule.</p></div></div></div></section></div><div class="page" data-page="team" hidden><section class="phero on-dark"><div class="pbg" aria-hidden="true"></div><div class="wrap"><h1 class="rv">Our Team</h1><p class="rv">The people behind Chayil Group.</p></div></section>
+<section class="band"><div class="wrap"><div class="tgrid"><div class="member rv"><div class="avatar">RH</div><h3>Rich Hernandez</h3><p class="role">Managing Partner</p><p class="bio">15+ years running Omni Construction Services.<br>CA General B License #1138683</p></div><div class="member rv"><div class="avatar">TH</div><h3>Tina Marie Hernandez</h3><p class="role">Broker</p><p class="bio">DRE# 01161076<br>714-501-9995<br>TinaMarie@chayilglobal.com</p></div><div class="member rv"><div class="avatar">+</div><h3><span class="ph">[Team member]</span></h3><p class="role"><span class="ph">[Title]</span></p><p class="bio"><span class="ph">[Short bio]</span></p></div></div></div></section></div><div class="page" data-page="agents" hidden><section class="phero on-dark"><div class="pbg" aria-hidden="true"></div><div class="wrap"><h1 class="rv">A Reliable Partner for Real Estate Agents</h1><p class="rv">Count on fast reviews, clear terms, and professional closings that make you and your clients look great.</p></div></section>
+<section class="band"><div class="wrap"><p class="lead big rv">At Chayil Group, we acquire properties directly for our portfolio, and when we place a property with one of our investors, your commission is protected. Beyond acquisitions, our team brings construction knowledge, vetted contractor referrals, and project management that make every deal more reliable. We communicate clearly, move quickly, and execute professionally so your reputation is protected.</p>
+<div class="feats c4"><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Commission Guarantee</h3><p>Your commission is protected in writing on every offer once contingencies are cleared. <span class="ph">[Confirm terms]</span></p></div><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Close Guarantee</h3><p>We close in as few as <span class="ph">[X–X]</span> days after due diligence when speed matters.*</p></div><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg></div><h3>Track Record</h3><p>$600 million in closed transactions and 1,000+ deals by the STJ Investments LLC team.</p></div><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></svg></div><h3>Industry Experience</h3><p>50+ years of combined team experience in construction and real estate.</p></div></div>
+<p class="fine rv">* Close Guarantee details: <span class="ph">[Add the exact escrow or deposit terms Chayil Group will commit to, reviewed by counsel]</span></p></div></section>
+<section class="band formband" id="agents-form"><div class="wrap fwrap"><div class="fintro rv"><h2>Submit a Property Opportunity</h2><p class="lead">Fill out the form below and we'll review your submission within <span class="ph">[1]</span> business day.</p></div>
+<form class="pform rv" data-req="name,email,addr,csz" novalidate><label>Full Name *<input name="name" type="text"></label><label>Email *<input name="email" type="email"></label><label>Phone<input name="phone" type="tel"></label><label>Brokerage<input name="brokerage" type="text"></label><label>Property Address *<input name="addr" type="text"></label><label>City, State, ZIP *<input name="csz" type="text"></label><label>Listing Status<select name="status"><option value="">Select…</option><option>Active</option><option>Off-Market</option><option>Coming Soon</option></select></label><label>Asking Price<input name="price" type="text"></label><label class="full">Additional Notes<textarea name="notes"></textarea></label>
+<p class="full consent">By submitting, you agree to receive calls and texts from Chayil Group. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out.</p>
+<button class="btn b-gold full" type="submit">Submit</button><p class="msg full" role="status"></p></form></div></section>
+<section class="band smsband"><div class="wrap sms rv"><div><h3>Join Our Agent Updates</h3><p>Licensed agents can receive occasional text updates about off-market opportunities, buyer needs, and partnership news.</p></div>
+<form class="smsform" data-req="mobile" novalidate><input name="mobile" type="tel" placeholder="Mobile number" aria-label="Mobile number"><button class="btn b-gold" type="submit">Sign Up</button><p class="msg" role="status"></p></form>
+<p class="consent" style="text-align:left;margin:0">By submitting, you agree to receive occasional SMS updates from Chayil Group. Message and data rates may apply. Message frequency may vary. Reply STOP to opt out or HELP for assistance. We do not sell or share your data. See our <a href="#privacy">Privacy Policy</a>.</p></div></section></div><div class="page" data-page="homeowners" hidden><section class="phero on-dark"><div class="pbg" aria-hidden="true"></div><div class="wrap"><h1 class="rv">Sell Your Home with Confidence</h1><p class="rv">Get a fair, no-obligation offer and close on your timeline.</p></div></section>
+<section class="band"><div class="wrap"><p class="lead big rv" style="text-align:center;margin-inline:auto">Prefer a straightforward sale? Or partner with us on improvements to maximize value? Either way, we keep it transparent and aligned to your goals.</p>
+<div class="nsteps"><div class="nstep rv"><span>1</span><h3>Share details</h3><p>Tell us about your property and goals.</p></div><div class="nstep rv"><span>2</span><h3>Review options</h3><p>We'll present clear, no-obligation solutions.</p></div><div class="nstep rv"><span>3</span><h3>Close with clarity</h3><p>Move forward on your timeline with full transparency.</p></div></div>
+<figure class="quote rv"><div class="qi"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a3 3 0 0 0-3 3v7h7v-7H6a1 1 0 0 1 0 0V9h4zM21 7h-4a3 3 0 0 0-3 3v7h7v-7h-4V9h4z"/></svg></div><blockquote><span class="ph">[Client testimonial — add a real quote with permission]</span></blockquote><figcaption><b><span class="ph">[Client name]</span></b><span><span class="ph">[Role] • [City], CA</span></span></figcaption></figure></div></section>
+<section class="band formband" id="owners-form"><div class="wrap fwrap"><div class="fintro rv"><h2>Get My Offer</h2><p class="lead">Share some details about your property and we'll reach out with next steps.</p></div>
+<form class="pform rv" data-req="name,email,addr,csz" novalidate><label>Full Name *<input name="name" type="text"></label><label>Email *<input name="email" type="email"></label><label>Phone<input name="phone" type="tel"></label><label>Property Address *<input name="addr" type="text"></label><label>City, State, ZIP *<input name="csz" type="text"></label><label>Home Condition<select name="cond"><option value="">Select…</option><option>Excellent</option><option>Good</option><option>Needs Work</option></select></label><label>Timeline<select name="when"><option value="">Select…</option><option>ASAP</option><option>30–60 days</option><option>Flexible</option></select></label><label class="full">Additional Notes<textarea name="notes"></textarea></label>
+<p class="full consent">By submitting, you agree to receive calls and texts from Chayil Group. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out.</p>
+<button class="btn b-gold full" type="submit">Submit</button><p class="msg full" role="status"></p></form></div></section></div><div class="page" data-page="investors" hidden><section class="phero on-dark"><div class="pbg" aria-hidden="true"></div><div class="wrap"><h1 class="rv">Invest with Confidence</h1><p class="rv">Partner with a professional team on selectively sourced residential opportunities.</p></div></section>
+<section class="band"><div class="wrap"><p class="lead big rv" style="text-align:center;margin-inline:auto">We go beyond investments by providing renovation design guidance, vetted contractor referrals, and hands-on project management for our investment group and partners. Every property is improved efficiently, stays on budget, and is positioned to maximize resale value.</p>
+<div class="feats c3"><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div><h3>Selective Sourcing</h3><p>Disciplined, data-driven evaluation of each opportunity, applying strict criteria and modern analytics.</p></div><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 12 6 21l-3-3 9-9M13 5l6 6M11 7l4-4 6 6-4 4"/></svg></div><h3>Value Optimization</h3><p>Design guidance, construction management, and vetted contractors to raise property value and returns.</p></div><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h4"/></svg></div><h3>Clear Structures</h3><p>Transparent terms with aligned incentives and defined exit strategies.</p></div></div>
+<figure class="quote rv"><div class="qi"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a3 3 0 0 0-3 3v7h7v-7H6a1 1 0 0 1 0 0V9h4zM21 7h-4a3 3 0 0 0-3 3v7h7v-7h-4V9h4z"/></svg></div><blockquote><span class="ph">[Client testimonial — add a real quote with permission]</span></blockquote><figcaption><b><span class="ph">[Client name]</span></b><span><span class="ph">[Role] • [City], CA</span></span></figcaption></figure></div></section>
+<section class="band formband" id="investors-form"><div class="wrap fwrap"><div class="fintro rv"><h2>Request Investor Information</h2><p class="lead">Tell us about your investment interests and we'll follow up with next steps.</p></div>
+<form class="pform rv" data-req="name,email" novalidate><label>Full Name *<input name="name" type="text"></label><label>Email *<input name="email" type="email"></label><label>Phone<input name="phone" type="tel"></label><label>Interest Level<select name="lvl"><option value="">Select…</option><option>Learning</option><option>Accredited</option><option>Family Office</option></select></label><label class="full">Additional Notes<textarea name="notes"></textarea></label>
+<p class="full consent">By submitting, you agree to receive calls and texts from Chayil Group. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out.</p>
+<button class="btn b-gold full" type="submit">Submit</button><p class="msg full" role="status"></p></form></div></section></div><div class="page" data-page="careers" hidden><section class="phero on-dark"><div class="pbg" aria-hidden="true"></div><div class="wrap"><h1 class="rv">Join Our Team</h1><p class="rv">We're hiring Acquisitions Associates who combine market curiosity with integrity and clear communication.</p></div></section>
+<section class="band"><div class="wrap"><p class="lead big rv" style="text-align:center;margin-inline:auto">Help us find and evaluate opportunities that create real value. Competitive compensation, a strong culture, and room to grow.</p>
+<h2 class="rv" style="text-align:center;margin-top:56px">What We're Looking For</h2>
+<div class="feats c4"><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2 .7 3.2 2.5 3.5 5.2"/></svg></div><h3>Ownership Mindset</h3><p>Take initiative and see projects through to completion.</p></div><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h4"/></svg></div><h3>Communication</h3><p>Clear, concise updates with stakeholders at every level.</p></div><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div><h3>Market Curiosity</h3><p>Stay informed on trends, pricing, and opportunity dynamics.</p></div><div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Integrity</h3><p>Ethical decision-making and transparent dealings, always.</p></div></div></div></section>
+<section class="band formband" id="careers-form"><div class="wrap fwrap"><div class="fintro rv"><h2>Apply Now</h2><p class="lead">Submit your application and we'll follow up if there's a potential fit.</p></div>
+<form class="pform rv" data-req="name,email" novalidate><label>Full Name *<input name="name" type="text"></label><label>Email *<input name="email" type="email"></label><label>Phone<input name="phone" type="tel"></label><label>LinkedIn URL<input name="li" type="text"></label><label class="full">Resume URL<input name="cv" type="text"></label><label class="full">Cover Note<textarea name="notes"></textarea></label>
+<p class="full consent">By submitting, you agree to receive calls and texts from Chayil Group. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out.</p>
+<button class="btn b-gold full" type="submit">Submit</button><p class="msg full" role="status"></p></form></div></section></div><div class="page" data-page="privacy" hidden><section class="phero on-dark"><div class="pbg" aria-hidden="true"></div><div class="wrap"><h1 class="rv">Privacy Policy</h1><p class="rv">Chayil Group</p></div></section><section class="band"><div class="wrap legaltext rv"><p class="fine" style="margin:0 0 24px">Draft placeholder. Have your attorney supply the final text before launch.</p><h3>Information we collect</h3><p>Name, email, phone, property details, and any notes you submit through our forms.</p><h3>How we use it</h3><p>To respond to your inquiry, evaluate properties, and send updates you agree to receive.</p><h3>Text messages</h3><p>Mobile numbers and SMS consent are not shared with third parties for marketing. Reply STOP to opt out at any time.</p><h3>Contact</h3><p>TinaMarie@chayilglobal.com • 714-501-9995</p></div></section></div><div class="page" data-page="terms" hidden><section class="phero on-dark"><div class="pbg" aria-hidden="true"></div><div class="wrap"><h1 class="rv">Terms and Conditions</h1><p class="rv">Chayil Group</p></div></section><section class="band"><div class="wrap legaltext rv"><p class="fine" style="margin:0 0 24px">Draft placeholder. Have your attorney supply the final text before launch.</p><h3>Use of this site</h3><p>Information on this site is for general purposes and is not an offer to buy or sell any property or security.</p><h3>No obligation</h3><p>Submitting a form does not create a contract or obligation for either party.</p><h3>SMS program</h3><p>Message frequency varies. Message and data rates may apply. Reply HELP for help, STOP to cancel.</p></div></section></div><div class="page" data-page="disclaimer" hidden><section class="phero on-dark"><div class="pbg" aria-hidden="true"></div><div class="wrap"><h1 class="rv">Disclaimer</h1><p class="rv">Chayil Group</p></div></section><section class="band"><div class="wrap legaltext rv"><p class="fine" style="margin:0 0 24px">Draft placeholder. Have your attorney supply the final text before launch.</p><p>Past results are not a guarantee of future performance. Any investment opportunity is offered only through formal documents and only where permitted by law. Chayil Group does not provide legal, tax, or financial advice. Real estate brokerage services provided by Tina Marie Hernandez, Broker, DRE# 01161076.</p></div></section></div></main>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><img class="flogo" src="logo.png" width="399" height="227" alt="Chayil Group"><p>Your trusted partner in real estate investment, built on decades of construction and real estate expertise.</p><p style="margin-top:14px;font-weight:600;color:var(--ink);font-size:14px">DRE # 01161076</p></div>
+      <div><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#team">Our Team</a></li><li><a href="#agents">For Agents</a></li><li><a href="#homeowners">For Homeowners</a></li><li><a href="#investors">For Investors</a></li><li><a href="#careers">Careers</a></li></ul></div>
+      <div><h4>Contact</h4><ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+17145019995">714-501-9995</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:TinaMarie@chayilglobal.com">TinaMarie@chayilglobal.com</a></li></ul></div>
+      <div><h4>Broker</h4><p style="color:var(--ink);font-weight:600">Tina Marie Hernandez</p><p>Licensed Real Estate Broker</p><p>DRE# 01161076</p></div>
+    </div>
+    <div class="legal"><span>© 2026 Chayil Group. All Rights Reserved.</span><div><a href="#privacy">Privacy Policy</a><a href="#terms">Terms and Conditions</a><a href="#disclaimer">Disclaimer</a></div></div>
+  </div>
+</footer>
+<script>
+{
+  const house='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 11 12 4l9 7v9H3z"/><path d="M10 20v-6h4v6"/></svg>';
+  const bed='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18V7M3 13h18v5M21 13a3 3 0 0 0-3-3h-7v3"/></svg>';
+  const D=[["$475,000","420 W. 30th St.","San Bernardino, CA 92405",3,"1.5","978","09/04/2025"],["$565,000","17730 Ivy Ave","Fontana, CA 92335",3,"2","1,117","08/26/2025"],["$639,888","1919 Huntington Dr. #B","Duarte, CA 91010",2,"2.5","1,521","06/27/2025"],["$852,500","13623 Dempster Ave","Downey, CA 90242",4,"2","1,614","05/06/2025"],["$819,000","15718 Aqueduct Ln","Chino Hills, CA 91709",3,"2","1,000","01/31/2025"],["$610,000","118 E. De Anza Cr.","Ontario, CA 91761",3,"1","1,166","02/12/2025"]];
+  const bath='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zM6 12V6a2 2 0 0 1 4 0"/></svg>';
+  const sq='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h5V4"/></svg>';
+  const deals=document.getElementById('deals');
+  if(deals)deals.innerHTML=D.map(([p,a,c,bd,ba,sf,dt],i)=>`<article class="proj rv"><div class="pic"><img src="deal${i+1}.jpg" alt="${a}, ${c}" loading="lazy" width="900" height="675"><span class="tag">Sold / Closed Sale</span></div><div class="body"><div class="price">${p}</div><h3>${a}</h3><div class="loc">${c}</div><div class="meta"><span>${bed} ${bd} Beds</span><span>${bath} ${ba} Baths</span><span>${sq} ${sf} Sqft</span></div><div class="date">Sale date: ${dt}</div></div></article>`).join('');
+  const pages=[...document.querySelectorAll('.page')],names=pages.map(p=>p.dataset.page);
+  const nav=document.getElementById('nav'),menu=document.getElementById('menu'),hdr=document.getElementById('top');
+  let io=null;
+  function reveal(scope){
+    const items=scope.querySelectorAll('.rv:not(.in)');
+    if(!('IntersectionObserver' in window)){items.forEach(e=>e.classList.add('in'));return}
+    if(!io)io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    items.forEach(el=>{const sib=[...el.parentElement.children].filter(c=>c.classList.contains('rv'));el.style.transitionDelay=(Math.max(0,sib.indexOf(el))*90)+'ms';io.observe(el)});
+  }
+  function route(){
+    let k=(location.hash||'#home').slice(1);
+    if(!names.includes(k))k='home';
+    pages.forEach(p=>p.hidden=p.dataset.page!==k);
+    nav.querySelectorAll('a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+k));
+    nav.classList.remove('open');menu.setAttribute('aria-expanded',false);
+    window.scrollTo(0,0);
+    const pg=pages.find(p=>p.dataset.page===k);reveal(pg);
+    document.title=k==='home'?'Chayil Group':(pg.querySelector('h1')?.textContent||'')+' | Chayil Group';
+  }
+  addEventListener('hashchange',route);route();
+  menu.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10),{passive:true});
+
+  const SEND='https://formsubmit.co/ajax/richomnibiz@gmail.com';
+  const LABEL={'agents-form':'Agent property submission','owners-form':'Homeowner offer request','investors-form':'Investor info request','careers-form':'Careers application'};
+  document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const req=(f.dataset.req||'').split(',').filter(Boolean),miss=req.filter(n=>!f[n].value.trim()),m=f.querySelector('.msg'),btn=f.querySelector('button[type=submit]');
+    m.classList.add('show');
+    if(miss.length){m.textContent=f.classList.contains('smsform')?'Please enter your mobile number.':'Please fill in the required fields marked with *.';f[miss[0]].focus();return}
+    const sec=f.closest('section'),kind=f.classList.contains('smsform')?'Agent text updates signup':(LABEL[sec&&sec.id]||'Website form');
+    const data=Object.fromEntries(new FormData(f).entries());
+    data._subject='Chayil Group website: '+kind;data._template='table';data['Form']=kind;
+    btn.disabled=true;m.textContent='Sending…';
+    try{
+      const r=await fetch(SEND,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
+      if(!r.ok)throw 0;
+      m.textContent='Thank you. We received your information and will follow up shortly.';f.reset();
+    }catch(_){
+      m.textContent='Sorry, this form could not be sent from here. Please call 714-501-9995 or email TinaMarie@chayilglobal.com.';
+    }finally{btn.disabled=false}
+  }));
+}
+</script>
+</body>
+</html>
