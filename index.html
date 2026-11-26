@@ -448,7 +448,8 @@ footer p[style*="var(--ink)"]{color:#fff!important}
     btn.disabled=true;m.textContent='Sending…';
     try{
       const r=await fetch(SEND,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
-      if(!r.ok)throw 0;
+      const j=await r.json().catch(()=>({}));
+      if(!r.ok||String(j.success)!=='true')throw 0;
       m.textContent='Thank you. We received your information and will follow up shortly.';f.reset();
     }catch(_){
       m.textContent='Sorry, this form could not be sent from here. Please call 714-501-9995 or email TinaMarie@chayilglobal.com.';
